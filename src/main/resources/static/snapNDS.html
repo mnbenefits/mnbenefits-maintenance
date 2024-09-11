@@ -1,43 +1,71 @@
 <!DOCTYPE html>
-<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title th:text="#{snap-nds.title}"></title>
+  <title>SNAP NDS</title>
   <link href="/honeycrisp.min.css" rel="stylesheet"/>
   <link href="/shiba.css" rel="stylesheet"/>
   <script src="/honeycrisp.min.js"></script>
 </head>
 <body class="locale-en" id="snapNDS">
 <div class="page-wrapper slab--shiba">
-  <div th:replace="~{fragments/toolbar :: toolbar}"></div>
-  <div th:replace="~{fragments/demoBanner :: demoBanner}"></div>
+  <div>
+    <header id="headerMNbenefits" class="main-header toolbar__wrapper">
+        <a href="#content" id="skip-to-content" class="button button--small button--intercom">Skip to content</a>
+        <div class="toolbar">
+            <a class="logo" href="/">
+                <img class="mn-state-icon"
+                     src="/images/minn_filled.svg"
+                     alt="MN State Icon">
+                <span class="sr-only-on-mobile">MNbenefits.mn.gov</span>
+            </a>
+
+        </div>
+    </header>
+</div>
+  <div class="demo-banner">MNbenefits is undergoing maintenance at this time. We should be finished shortly.</div>
   <section class="slab spacing-above-35">
     <div class="grid">
       <div class="grid__item">
-        <h1 class="spacing-below-35" th:text="#{snap-nds.header}"></h1>
+        <h1 class="spacing-below-35">SNAP non-discrimination statement</h1>
       </div>
     </div>
   </section>
   <main id="content" role="main" class="slab slab--white">
     <div class="grid">
       <div class="grid__item">
-        <p class="text-bold" th:text="#{snap-nds.do-not-send-applications-here}"></p>
-        <p th:utext="#{snap-nds.p1}"></p>
-        <p th:utext="#{snap-nds.p2}"></p>
-        <p th:utext="#{snap-nds.p3}"></p>
+        <p class="text-bold">Do Not Send Applications Here</p>
+        <p>In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), religious creed, disability, age, political beliefs, or reprisal or retaliation for prior civil rights activity.</p>
+        <p>Program information may be made available in languages other than English. Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the agency (state or local) where they applied for benefits. Individuals who are deaf, hard of hearing or have speech disabilities may contact USDA through the Federal Relay Service at (800) 877-8339.</p>
+        <p>To file a program discrimination complaint, a Complainant should complete a Form AD-3027, <a href="https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-Complaint-Form-0508-0002-508-11-28-17Fax2Mail.pdf" title="Form AD-3027 - USDA Program Discrimination Complaint Form" target="_blank" onclick="_gaq.push(['_trackEvent', 'download', 'pdf', 'USDA-OASCR%20P-Complaint-Form-0508-0002-508-11-28-17Fax2Mail.pdf']);">USDA Program Discrimination Complaint Form (PDF)</a>, from any USDA office, by calling (833) 620-1071, or by writing a letter addressed to USDA. The letter must contain the complainant's name, address, telephone number, and a written description of the alleged discriminatory action in sufficient detail to inform the Assistant Secretary for Civil Rights (ASCR) about the nature and date of an alleged civil rights violation. The completed AD-3027 form or letter must be submitted to:</p>
         <ul class="list--bulleted">
-          <li th:utext="#{snap-nds.mail}"></li>
-          <li th:utext="#{snap-nds.fax}"></li>
-          <li th:utext="#{snap-nds.email}"></li>
+          <li><strong>mail:</strong><br>Food and Nutrition Service, USDA<br>1320 Braddock Place, Room 334<br>Alexandria, VA 22314; or</li>
+          <li><strong>fax:</strong> (833) 256-1665 or (202) 690-7442; or</li>
+          <li><strong>email: </strong><a class="long-file-name" href="mailto:FNSCIVILRIGHTSCOMPLAINTS@usda.gov" title="Email FNS Civil Rights Complaints" target="_blank">FNSCIVILRIGHTSCOMPLAINTS@usda.gov</a></li>
         </ul>
-        <p th:text="#{snap-nds.eop}"></p>
-        <p class="text-bold" th:text="#{snap-nds.do-not-send-applications-here}"></p>
+        <p>This institution is an equal opportunity provider.</p>
+        <p class="text-bold">Do Not Send Applications Here</p>
       </div>
     </div>
   </main>
 </div>
-<div th:replace="~{fragments/footer :: footer}"></div>
+<footer id="footerMNbenefits" class="main-footer footer-minnesota-blue">
+    <div class="grid">
+        <div class="grid__item">
+            <div class="width-one-half grid__item">
+                <p class="font-white text--small--footer spacing-below-25">MNbenefits is developed on behalf of the people of Minnesota in partnership between the state agencies that administer the programs, Minnesota IT Services, and Minnesota counties and Tribal Nations.</p>
+                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/faq">Frequently Asked Questions (FAQ)</a><br/>
+                <a id="link-snap-nds" class="footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/snapNDS">SNAP non-discrimination statement</a><br/>
+                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/privacy">privacy policy</a>
+            </div>
+            <div class="main-footer__mn-logo grid__item">
+                <a href="https://mn.gov/portal/"
+                   class="illustration illustration--mn-logo spacing-below-0">https://mn.gov/portal/</a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

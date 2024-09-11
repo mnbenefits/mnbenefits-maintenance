@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
-  <title th:text="#{privacy-policy.privacy-policy}"></title>
+  <title>Privacy Policy</title>
   <link href="/honeycrisp.min.css" rel="stylesheet"/>
   <link href="/shiba.css" rel="stylesheet"/>
   <script src="/honeycrisp.min.js"></script>
 </head>
 <body class="locale-en" id="landing-page">
 <div class="page-wrapper slab--shiba">
-  <div th:replace="~{fragments/toolbar :: toolbar}"></div>
-  <div th:replace="~{fragments/demoBanner :: demoBanner}"></div>
+  <div>
+    <header id="headerMNbenefits" class="main-header toolbar__wrapper">
+        <a href="#content" id="skip-to-content" class="button button--small button--intercom">Skip to content</a>
+        <div class="toolbar">
+            <a class="logo" href="/">
+                <img class="mn-state-icon"
+                     src="/images/minn_filled.svg"
+                     alt="MN State Icon">
+                <span class="sr-only-on-mobile">MNbenefits.mn.gov</span>
+            </a>
+        </div>
+    </header>
+</div>
+  <div class="demo-banner">MNbenefits is undergoing maintenance at this time. We should be finished shortly.</div>
   <section class="slab spacing-above-35">
     <div class="grid">
       <div class="grid__item">
-        <h1 class="spacing-below-35" th:text="#{privacy-policy.privacy-policy}"></h1>
-        <p class="text-25 spacing-below-35" th:text="#{privacy-policy.subheader}"></p>
+        <h1 class="spacing-below-35">Privacy Policy</h1>
+        <p class="text-25 spacing-below-35">How we use, share, and protect your information</p>
       </div>
     </div>
   </section>
@@ -25,94 +37,73 @@
     <div class="grid">
       <nav class="grid__item width-one-third">
         <h2 class="h3">Table of Contents</h2>
-        <div class="spacing-below-35"><a href="#overview" th:utext="#{privacy-policy.overview}"></a>
+        <div class="spacing-below-35"><a href="#overview">Overview</a>
         </div>
-        <div class="spacing-below-35"><a href="#information-we-collect"
-                                         th:utext="#{privacy-policy.info-we-collect}"></a></div>
-        <div class="spacing-below-35"><a href="#how-we-use-info"
-                                         th:utext="#{privacy-policy.how-we-use-info}"></a></div>
-        <div class="spacing-below-35"><a href="#how-we-share-info"
-                                         th:utext="#{privacy-policy.how-we-share-info}"></a></div>
-        <div class="spacing-below-35"><a href="#how-we-protect-info"
-                                         th:utext="#{privacy-policy.how-we-protect-information}"></a>
+        <div class="spacing-below-35"><a href="#information-we-collect">Information we collect</a></div>
+        <div class="spacing-below-35"><a href="#how-we-use-info">How we use your information</a></div>
+        <div class="spacing-below-35"><a href="#how-we-share-info">How we share your information</a></div>
+        <div class="spacing-below-35"><a href="#how-we-protect-info">How we protect your information</a>
         </div>
-        <div class="spacing-below-35"><a href="#changes" th:utext="#{privacy-policy.changes}"></a>
+        <div class="spacing-below-35"><a href="#changes">Changes</a>
         </div>
-        <div class="spacing-below-35"><a href="#effective-date"
-                                         th:utext="#{privacy-policy.effective-date}"></a></div>
-        <div class="spacing-below-35 spacing-below-60"><a href="#questions"
-                                                          th:utext="#{privacy-policy.questions}"></a>
+        <div class="spacing-below-35"><a href="#effective-date">Effective Date</a></div>
+        <div class="spacing-below-35 spacing-below-60"><a href="#questions">Questions</a>
         </div>
       </nav>
       <div class="grid__item shift-one-twelfth width-seven-twelfths">
         <div class="grid">
-          <p th:utext="#{privacy-policy.minnesota-privacy-policy}"></p>
-          <h1 class="h2 spacing-below-35" th:text="#{privacy-policy.privacy-policy}"></h1>
+          <p><a class="h2 spacing-below-35" href="https://edocs.dhs.state.mn.us/lfserver/Public/DHS-3979-ENG">Minnesota Privacy Policy</a></p>
+          <h1 class="h2 spacing-below-35">Privacy Policy</h1>
           <div class="grid__item">
             <div class="grid__item spacing-below-35">
-              <h2 class="h3" id="overview" th:utext="#{privacy-policy.overview}"></h2>
-              <p th:utext="#{privacy-policy.overviewp2}"></p>
-              <p th:utext="#{privacy-policy.overviewp3}"></p>
-              <p th:utext="#{privacy-policy.overviewp4}"></p>
-              <p th:utext="#{privacy-policy.overviewp5}"></p>
-              <p th:utext="#{privacy-policy.overviewp6}"></p>
-              <h2 id="information-we-collect" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.info-we-collect}"></h2>
-              <p th:utext="#{privacy-polcy.info-we-collect-0}"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect1}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect2}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect3}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect4}|"></p>
-              <p th:utext="#{privacy-policy.info-we-collect5}"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect6}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect7}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect8}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect9}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect10}|"></p>
-              <p th:utext="|• #{privacy-policy.info-we-collect11}|"></p>
-              <p th:utext="#{privacy-policy.info-we-collect12}"></p>
-              <p th:utext="#{privacy-policy.info-we-collect13}"></p>
-              <p th:utext="#{privacy-policy.info-we-collect14}"></p>
-              <h2 id="how-we-use-info" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.how-we-use-info}"></h2>
-              <p th:utext="#{privacy-policy.how-we-use-info1}"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info2}|"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info3}|"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info4}|"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info5}|"></p>
-              <p th:utext="#{privacy-policy.how-we-use-info6}"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info7}|"></p>
-              <p th:utext="|• #{privacy-policy.how-we-use-info8}|"></p>
-              <h2 id="how-we-share-info" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.how-we-share-info}"></h2>
-              <p th:utext="#{privacy-policy.how-we-share-info1}"></p>
-              <p th:utext="#{privacy-policy.how-we-share-info2}"></p>
-              <p th:utext="#{privacy-policy.how-we-share-info3}"></p>
-              <p th:utext="#{privacy-policy.how-we-share-info4}"></p>
-              <h2 id="how-we-protect-info" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.how-we-protect-information}"></h2>
-              <p th:utext="#{privacy-policy.how-we-protect-info1}">Protecting your personal
-                information is extremely important to us and we take all reasonable measures to do
-                so. Here are some specific security practices we use:</p>
-              <p th:utext="|• #{privacy-policy.how-we-protect-info2}|">When you enter your
-                information on our site, we encrypt the transmission of that information using
-                transport layer security (TLS).</p>
-              <p th:utext="|• #{privacy-policy.how-we-protect-info3}|">Although we try our best to
-                protect the privacy of your personal information, we cannot guarantee complete
-                security. The transmission of information via the Internet is not completely secure.
-                Unauthorized entry or use, hardware or software failure, and other factors, may
-                compromise the security of user information at any time.</p>
-              <h2 id="changes" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.changes}"></h2>
-              <p th:utext="#{privacy-policy.changes1}"></p>
-              <h2 id="effective-date" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.effective-date}"></h2>
-              <p th:utext="#{privacy-policy.effective-date1}"></p>
-              <h2 id="questions" class="h3 spacing-above-60"
-                  th:utext="#{privacy-policy.questions}"></h2>
-              <p th:utext="#{privacy-policy.questions1}"></p>
+              <h2 class="h3" id="overview">Overview</h2>
+              <p>We will only use your personal information to:</p>
+              <p>1. Help you get and keep benefits in Minnesota that you apply for on future versions of the Site ("Minnesota Benefits" herein refers to all such programs).</p>
+              <p>2. Suggest other services or assistance programs that may be useful to you. We will only use your personal information in order to present those services or programs to you as an option, but will never send your personal information to any other services or programs without your permission.</p>
+              <p>We will not knowingly disclose or sell your personal information to any third party, except as provided in this privacy policy.</p>
+              <p>We will take all reasonable measures to protect your personal information.</p>
+              <h2 id="information-we-collect" class="h3 spacing-above-60">Information we collect</h2>
+              <p>We collect and store</p>
+              <p>• All information that you provide through the Site, including your name, address, contact information, social security number, financial information, and similar information for other individuals that you include on your Minnesota Benefits application</p>
+              <p>• Copies of any documents you upload, like pictures of your driver's license, pay stubs, birth certifications, rent receipts, etc.</p>
+              <p>• Any messages you send us through SMS, email, or live chat</p>
+              <p>• Any answers or comments you provide in response to a survey we send you</p>
+              <p>In addition to the information you provide, we automatically collect and store information about your visit to the Site:</p>
+              <p>• Device from which you access the Internet</p>
+              <p>• IP address (an IP or internet protocol address is a number that is automatically given to a computer connected to the Web)</p>
+              <p>• Operating system on your computer and information about the browser you used when visiting the site</p>
+              <p>• Date and time of your visit.</p>
+              <p>• Pages you visited</p>
+              <p>• Address of the website that connected you to the Site (such as google.com or bing.com)</p>
+              <p>We use this information to understand how the Site is used, improve the Site, and monitor usage for security purposes. This data is stored separately from the personal information you submit in the Minnesota Benefits application.</p>
+              <p>We will not collect personal information from you without your knowledge and consent, except in a few limited circumstances as described in this policy.</p>
+              <p>We currently retain all data indefinitely unless you specifically request that we delete it. You can request that we delete your data by emailing us at <a href="mailto:help@mnbenefits.org">help@mnbenefits.org</a>.</p>
+              <h2 id="how-we-use-info" class="h3 spacing-above-60">How we use your information</h2>
+              <p>We only use your personal information to help you get and keep benefits in Minnesota. For example:</p>
+              <p>• We submit your Minnesota Benefits application and documents to the appropriate department in your County.</p>
+              <p>• We may remind you to complete your phone interview and submit documents, depending on your contact preferences.</p>
+              <p>• We may provide ongoing support to help you keep your benefits by reminding you when you have to submit income changes, complete your Semi-Annual Report, or complete your annual Recertification.</p>
+              <p>• To provide these services, we may access an account linked to your case in your county's online system.</p>
+              <p>We will send you a confirmation message when we have successfully submitted your information to your county. We may also send you a message if there is a problem submitting your information to your county and additional information is needed. Outside of those cases:</p>
+              <p>• We will not send you an email unless you consent to email communication in the application or you email us first.</p>
+              <p>• We will not send you a text message unless you consent to text message communication in the application.</p>
+              <h2 id="how-we-share-info" class="h3 spacing-above-60">How we share your information</h2>
+              <p>Once you submit your Minnesota Benefits application on the Site, we share this information with the Human Services Agency (HSA) in the County where you live. Each Minnesota county has their own HSA, which processes Minnesota Benefits applications and administers your benefits. Once your personal information is received by the HSA it is then subject to their respective privacy policies.</p>
+              <p>We also disclose your personal information to contractors, and affiliated organizations that need to know the information in order to provide the services of the Site.</p>
+              <p>We learn from and share comments that you have in the application, Live Chat, SMS, email, and surveys to better understand Minnesota Benefits enrollment in order to reduce barriers in the safety net system. This may include sharing your information with your county to help them provide better service to you and improve the services they provide. It may also include sharing anonymized quotes in the course of our work with partners.</p>
+              <p>We do not share your personal information with any other individuals or organizations, except to the minimal extent required by law.</p>
+              <h2 id="how-we-protect-info" class="h3 spacing-above-60">How we protect your information</h2>
+              <p>Protecting your personal information is extremely important to us and we take all reasonable measures to do so. Here are some specific security practices we use:</p>
+              <p>• When you enter your information on our site, we encrypt the transmission of that information using transport layer security (TLS).</p>
+              <p>• Although we try our best to protect the privacy of your personal information, we cannot guarantee complete security. The transmission of information via the Internet is not completely secure. Unauthorized entry or use, hardware or software failure, and other factors, may compromise the security of user information at any time.</p>
+              <h2 id="changes" class="h3 spacing-above-60">Changes</h2>
+              <p>We may change this Privacy Policy from time to time. Please check this page frequently for updates as your continued use of the Site after any changes in this Privacy Policy will constitute your acceptance of the changes.</p>
+              <h2 id="effective-date" class="h3 spacing-above-60">Effective Date</h2>
+              <p>This version of the policy is effective August 1, 2020.</p>
+              <h2 id="questions" class="h3 spacing-above-60">Questions</h2>
+              <p>If you have any questions, comments, concerns, or complaints with the Site, please contact us by email at <a href="mailto:help@mnbenefits.org">help@mnbenefits.org</a></p>
               <br>
-              <p th:utext="#{privacy-policy.questions6}"></p>
+              <p>We will do our best to resolve the issue.</p>
             </div>
           </div>
         </div>
@@ -120,6 +111,21 @@
     </div>
   </main>
 </div>
-<div th:replace="~{fragments/footer :: footer}"></div>
+<footer id="footerMNbenefits" class="main-footer footer-minnesota-blue">
+    <div class="grid">
+        <div class="grid__item">
+            <div class="width-one-half grid__item">
+                <p class="font-white text--small--footer spacing-below-25">MNbenefits is developed on behalf of the people of Minnesota in partnership between the state agencies that administer the programs, Minnesota IT Services, and Minnesota counties and Tribal Nations.</p>
+                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/faq">Frequently Asked Questions (FAQ)</a><br/>
+                <a id="link-snap-nds" class="footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/snapNDS">SNAP non-discrimination statement</a><br/>
+                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/privacy">privacy policy</a>
+            </div>
+            <div class="main-footer__mn-logo grid__item">
+                <a href="https://mn.gov/portal/"
+                   class="illustration illustration--mn-logo spacing-below-0">https://mn.gov/portal/</a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
