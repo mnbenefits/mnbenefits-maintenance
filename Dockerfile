@@ -1,5 +1,6 @@
 FROM openjdk:17.0
 COPY . .
+RUN microdnf install findutils
 RUN chmod +x gradlew
 RUN ./gradlew assemble
 RUN cp target/*.jar app.jar
