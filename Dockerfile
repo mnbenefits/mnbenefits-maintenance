@@ -3,6 +3,9 @@ COPY . .
 RUN microdnf install findutils
 RUN chmod +x gradlew
 RUN ./gradlew assemble
+RUN echo "Trying to print pwd and ls now"
+RUN pwd
+RUN ls
 COPY build/libs/*.jar /app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar","/app.jar"]
