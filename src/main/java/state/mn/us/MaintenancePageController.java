@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MaintenancePageController {
 
-	@GetMapping({"/","/*/*"})
+	@GetMapping({"/","/*/*", "/pages/*"})
 	public String showHomePage() {
 	    return "/maintenance.html";   
 	   }
