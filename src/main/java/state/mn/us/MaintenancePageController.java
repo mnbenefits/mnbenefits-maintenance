@@ -14,7 +14,7 @@ public class MaintenancePageController {
 		System.out.println("GET!");
 	    return "/maintenance.html";   
 	   }
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value={"/","/*/*", "/pages/*"} , method = RequestMethod.POST)
 	public String postMapping() {
 		System.out.println("POST!");
 		return "/maintenance.html";
