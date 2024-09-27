@@ -30,12 +30,7 @@ public class MaintenancePageController {
 	    return "/maintenance.html";   
 	   }
 	
-//	@RequestMapping(value={"/","/*/*", "/pages/*"} , method = RequestMethod.POST)
-//	public String postMapping() {
-//		System.out.println("POST!");
-//		return "/maintenance.html";
-//	}
-	
+
 	@PostMapping(value={"/","/*/*", "/pages/*"}  )
 	public String postMapping() {
 		System.out.println("POST!");
@@ -43,7 +38,6 @@ public class MaintenancePageController {
 	}
 	
 
-	
 	@GetMapping(value = "/images/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
 	@ResponseBody
 	public ResponseEntity<byte[]> getImage(HttpServletRequest request, @PathVariable String fileName) throws IOException {
@@ -61,6 +55,7 @@ public class MaintenancePageController {
 
         return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
 	}
+	
 	
 	@GetMapping(value = "/documents/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
 	@ResponseBody
