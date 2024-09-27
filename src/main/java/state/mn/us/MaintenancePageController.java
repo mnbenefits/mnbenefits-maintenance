@@ -41,12 +41,8 @@ public class MaintenancePageController {
 	@GetMapping(value = "/images/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
 	@ResponseBody
 	public ResponseEntity<byte[]> getImage(HttpServletRequest request, @PathVariable String fileName) throws IOException {
-		String rpath = request.getContextPath();
-		System.out.println("====== getImage for " + fileName);
-		System.out.println("rpath = " + rpath);
         // Get the image from your storage (e.g., file system, database)
         File imageFile = new File("src/main/resources/static/images/" + fileName);
-        System.out.println("====== File exists = " + imageFile.exists());
         byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
 
         // Set the content type based on the image format
@@ -60,12 +56,8 @@ public class MaintenancePageController {
 	@GetMapping(value = "/documents/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
 	@ResponseBody
 	public ResponseEntity<byte[]> getDocuments(HttpServletRequest request, @PathVariable String fileName) throws IOException {
-		String rpath = request.getContextPath();
-		System.out.println("====== getDocuments for " + fileName);
-		System.out.println("rpath = " + rpath);
         // Get the image from your storage (e.g., file system, database)
         File imageFile = new File("src/main/resources/static/documents/" + fileName);
-        System.out.println("====== File exists = " + imageFile.exists());
         byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
 
         // Set the content type based on the image format
