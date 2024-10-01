@@ -24,7 +24,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @Controller
 public class MaintenancePageController {
 
-	@GetMapping({"/", "/pages/*"})
+	@GetMapping({"/", "/pages/*", "/home", "/error"})
 	public String showMaintenancePage() {
 		System.out.println("GET!");
 	    return "/maintenance.html";   
