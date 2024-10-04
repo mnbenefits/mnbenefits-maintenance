@@ -3,6 +3,7 @@ package state.mn.us;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.Map;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,15 +29,21 @@ public class MaintenancePageController {
 	   }
 
 	@GetMapping({"/", "/pages/*", "/home", "/error"})
-	public String showMaintenancePage() {
+	public String showMaintenancePage(@RequestParam(required=false) Map<String,String> qparams) {
 		System.out.println("GET!");
+	    qparams.forEach((a,b) -> {
+	        System.out.println(String.format("%s -> %s",a,b));
+	    });
 	    return "/maintenance.html";   
 	   }
 	
 
 	@PostMapping(value={"/","/*/*", "/pages/*"}  )
-	public String postMapping() {
+	public String postMapping(@RequestParam(required=false) Map<String,String> qparams) {
 		System.out.println("POST!");
+	    qparams.forEach((a,b) -> {
+	        System.out.println(String.format("%s -> %s",a,b));
+	    });
 		return "/maintenance.html";
 	}
 	
