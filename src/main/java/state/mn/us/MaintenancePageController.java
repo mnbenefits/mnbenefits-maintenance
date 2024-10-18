@@ -24,58 +24,81 @@ public class MaintenancePageController {
 	
 	@GetMapping({"/pages/healthcareRenewalUpload"})
 	public String showHealthCareUploadMaintenancePage() {
-		System.out.println("GET HC!");
 	    return "/hcmaintenance.html";   
 	   }
 
 	@GetMapping({"/", "/pages/*", "/home", "/error"})
 	public String showMaintenancePage(@RequestParam(required=false) Map<String,String> qparams) {
-		System.out.println("GET!");
-	    qparams.forEach((a,b) -> {
-	        System.out.println(String.format("%s -> %s",a,b));
-	    });
+		
 	    return "/maintenance.html";   
 	   }
 	
 
-	@PostMapping(value={"/","/*/*", "/pages/*"}  )
-	public String postMapping(@RequestParam(required=false) Map<String,String> qparams) {
-		System.out.println("POST!");
-	    qparams.forEach((a,b) -> {
-	        System.out.println(String.format("%s -> %s",a,b));
-	    });
-		return "/maintenance.html";
-	}
+//	@PostMapping(value={"/","/*/*", "/pages/*"}  )
+//	public String postMapping(@RequestParam(required=false) Map<String,String> qparams) {
+//		System.out.println("POST!");
+//	    qparams.forEach((a,b) -> {
+//	        System.out.println(String.format("%s -> %s",a,b));
+//	    });
+//		return "/maintenance.html";
+//	}
 	
 
-	@GetMapping(value = "/images/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
-	@ResponseBody
-	public ResponseEntity<byte[]> getImage(HttpServletRequest request, @PathVariable String fileName) throws IOException {
-        // Get the image from your storage (e.g., file system, database)
-        File imageFile = new File("src/main/resources/static/images/" + fileName);
-        byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
-
-        // Set the content type based on the image format
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.IMAGE_PNG); 
-
-        return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
-	}
-	
-	
-	@GetMapping(value = "/documents/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
-	@ResponseBody
-	public ResponseEntity<byte[]> getDocuments(HttpServletRequest request, @PathVariable String fileName) throws IOException {
-        // Get the image from your storage (e.g., file system, database)
-        File imageFile = new File("src/main/resources/static/documents/" + fileName);
-        byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
-
-        // Set the content type based on the image format
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF); 
-
-        return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
-	}
+//	@GetMapping(value = "/images/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
+//	@ResponseBody
+//	public ResponseEntity<byte[]> getImage(HttpServletRequest request, @PathVariable String fileName) throws IOException {
+//        // Get the image from your storage (e.g., file system, database)
+//        File imageFile = new File("src/main/resources/static/images/" + fileName);
+//        byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
+//
+//        // Set the content type based on the image format
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.IMAGE_PNG); 
+//
+//        return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
+//	}
+//	
+//	
+//	@GetMapping(value = "/documents/{fileName}",  produces = MediaType.TEXT_PLAIN_VALUE)
+//	@ResponseBody
+//	public ResponseEntity<byte[]> getDocuments(HttpServletRequest request, @PathVariable String fileName) throws IOException {
+//        // Get the image from your storage (e.g., file system, database)
+//        File imageFile = new File("src/main/resources/static/documents/" + fileName);
+//        byte[] imageBytes = Files.readAllBytes(imageFile.toPath());
+//
+//        // Set the content type based on the image format
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.APPLICATION_PDF); 
+//
+//        return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
+//	}
 	
 	
 }
+
+//package state.mn.us.controller;
+//
+//import org.springframework.stereotype.Controller;
+//import org.springframework.ui.Model;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//@Controller
+//public class MaintenancePageController {
+//
+//    @GetMapping("/")
+//    public String page1(Model model) {
+//        return "maintenance"; 
+//    }
+//    
+//   
+//    @GetMapping("/hcmaintenance")
+//    public String page2(Model model) {
+//        return "HCMaintenance"; 
+//    }
+//    
+//    @GetMapping("/**")
+//    public String pageErr() {
+//        return "maintenance";
+//    }
+//}
