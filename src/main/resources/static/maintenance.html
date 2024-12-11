@@ -34,16 +34,47 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
 	<link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
         .faded-pink-div {
-            background-color: rgba(252, 227, 217); /* Faded pink */
-            border: 5px solid #d13f00; /* Light pink border */
+            background-color: rgba(252, 227, 217); 
+            border: 5px solid #d13f00; 
             padding: 20px;
-            border-radius: 8px; /* Optional: rounded corners */
-            text-align: center; /* Optional: center text */
+            border-radius: 8px; 
+            text-align: center; 
         }
+        
+         .light-gray-div {
+            background-color: #f7f5f4; 
+            border: 2.5px solid #cfc5bf; 
+            padding: 20px;
+            text-align: center;
+            
+        }
+        
+		.logo-container {
+		    min-width: 20rem;
+		    text-align: left; 
+			}
+		
+		.logo {
+		    width: auto; 
+		    height: auto;
+			}
+		
+		@media (min-width: 768px) { 
+		    .logo-container {
+		        text-align: center; 
+		        
+		 	        
+		    }
+			}
+			
+        
+        
     </style>
 
 </head>
@@ -67,9 +98,9 @@
 </div>
   
 
- 	 <div class="faded-pink-div m-4">
+ 	 <div class="faded-pink-div text-start spacing-below-25 spacing-above-15">
 	           <h1> We are currently performing scheduled maintenance. Please try again after X:00am CST.</h1>
-	           <h3> Spanish--FP0-We are currently performing scheduled maintenance. Please try again after X:00am CST” </h3>
+	           <h3>Estamos realizando un mantenimiento programado. Inténtelo nuevamente después de las X:00 a. m., CST.</h3>
 	            </div>
   
     
@@ -84,8 +115,7 @@
 		
 		
 		
-		  <div class="d-flex justify-content-center align-items-center">
-    <div class="text-center p-4">
+		  <div class="logo-container spacing-below-25">
 			 <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3849 68.0244C34.2184 48.2792 33.2063 26.5908 48.4058 13.7788C63.9914 0.641463 86.1481 1.53 106.092 5.89538C126.288 10.316 145.224 19.6786 155.906 37.3087C167.987 57.2482 175.204 82.147 164.984 103.093C154.792 123.981 130.094 130.557 107.534 136.446C83.6102 142.691 55.2629 153.117 37.0102 136.499C19.1719 120.257 30.1595 91.9902 32.3849 68.0244Z" fill="#EA8C64"/>
 <line x1="105.005" y1="104.326" x2="108.095" y2="124.412" stroke="black" stroke-width="3"/>
@@ -109,19 +139,37 @@
 </svg>
 
     	 </div>
-</div>
-    	
-            <div class="text-center spacing-above-35 p-4">
-                <img src="/images/mn-logo-horizontal-rgb.png" alt="mn LOGO"  class="mn-logo">
+						
+            
+             <div class="logo-container img">
+                <img src="/images/mn-logo-horizontal-rgb.png" alt="mn LOGO" style="width: 50%;" class="mn-logo">
        
             </div>
+            <br>	<br>
             
-		   <div class="spacing-above-35 p-4">
-            <h1 class="spacing-below-25"> <strong> MNbenefits application is currently  offline for scheduled maintenance.</strong></h1>
+		   <div class=" spacing-above-25">
+            <h1 class=""> <strong> The MNbenefits application is currently offline for scheduled maintenance.</strong></h1>
             <p class="text-25 spacing-below-15 ">Please return later to apply for benefits or to upload documents for an existing application. </p>
-		   <br>	   <hr>	   <br>
-		   <h1 class="spacing-below-25"><strong>La aplicación MNbenefits está actualmente fuera de línea para el mantenimiento programado.</strong></h1>
-            <p class="text-25 spacing-below-15">Regrese más tarde para solicitar beneficios o para cargar documentos para una solicitud existente. </p>
+		   </div>
+		   <br>	<br>  
+		   
+    <section class="light-gray-div text-start">
+        <h2><strong>Need help now?</strong></h2>
+        <p class="text-25">If you are in a mental health crisis, call or text 988.</p>
+        <p class="text-25">To connect with food, housing, medical or other help, you can call 211, or text your zip code to 898-211, or visit <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" lang="en" style="text-decoration: underline;">211.org.</a></p>
+    </section>
+     	   <br> <br>	
+		  <div class="spacing-below-25">
+            <h1 class=""> <strong> La solicitud de MNbenefits está actualmente fuera de servicio por mantenimiento programado.</strong></h1>
+            <p class="text-25 spacing-below-15 ">Regrese más tarde para solicitar beneficios o cargar documentos para una solicitud existente.</p>
+		  </div>
+		   <br> <br>
+		   
+ 	<section class="light-gray-div text-start">
+        <h2><strong>¿Necesita ayuda ahora?</strong></h2>
+        <p class="text-25">Si se encuentra en una crisis de salud mental, llame o envíe un mensaje de texto al 988.</p>
+        <p class="text-25">Para recibir ayuda de alimentos, vivienda, ayuda médica y de otro tipo, puede llamar al 211, o enviar un mensaje de texto con su código postal al 898-211, o visitar <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">211.org.</a></p>
+    </section>
 		   
 		   </div>
 		   </div>
@@ -142,10 +190,8 @@
         <div class="grid__item">
             <div class="width-one-half grid__item">
                 <p class="font-white text--small--footer spacing-below-25">MNbenefits is developed on behalf of the people of Minnesota in partnership between the state agencies that administer the programs, Minnesota IT Services, and Minnesota counties and Tribal Nations.</p>
-                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/faq">Frequently Asked Questions (FAQ)</a><br>
-                <a id="link-snap-nds" class="footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/snapNDS">SNAP non-discrimination statement</a><br>
-                <a class="capitalized footer__privacy-policy-link font-white text--small" target="_blank" rel="noopener noreferrer" href="/privacy">privacy policy</a>
-            </div>
+                <p class="font-white text--small--footer">MNbenefits se ha desarrollado en nombre de la población de Minnesota en asociación entre las agencias estatales que administran los programas, Minnesota IT Services y los condados y naciones tribales de Minnesota.</p>
+             </div>
             <div class="main-footer__mn-logo grid__item">
                 <a href="https://mn.gov/portal/" class="illustration illustration--mn-logo spacing-below-0">https://mn.gov/portal/</a>
             </div>
