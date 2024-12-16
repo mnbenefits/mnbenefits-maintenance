@@ -12,7 +12,7 @@
 	<meta property="og:image" content="/images/social-share-link-image.png" />
 	<meta name="robots" content="noindex, nofollow">
     
-    <title>MNbenefits</title>
+    <title>MNbenefits-Maintenance / Mantenimiento</title>
     <link href="/honeycrisp.min.css" rel="preload" as="style" />
     <link href="/honeycrisp.min.css" rel="stylesheet"/>
     <link rel="preload" href="/honeycrisp.min.js" as="script">
@@ -41,9 +41,9 @@
 <style>
         .faded-pink-div {
             background-color: rgba(252, 227, 217); 
-            border: 5px solid #d13f00; 
+            border: 3px solid #d13f00; 
             padding: 20px;
-            border-radius: 8px; 
+            border-radius: 2px; 
             text-align: center; 
         }
         
@@ -71,9 +71,29 @@
 		        
 		 	        
 		    }
+
 			}
 			
-        
+   .img {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .img img {
+		width: 328px;
+		height: 35px;
+    }
+
+    @media (max-width: 768px) {
+        .img {
+            justify-content: flex-start; 
+        }
+
+        .img img {
+            width: 242px;
+		height: 26px; 
+        }
+    }     
         
     </style>
 
@@ -98,9 +118,9 @@
 </div>
   
 
- 	 <div class="faded-pink-div text-start spacing-below-25 spacing-above-15">
-	           <h1> We are currently performing scheduled maintenance. Please try again after X:00am CST.</h1>
-	           <h3>Estamos realizando un mantenimiento programado. Inténtelo nuevamente después de las X:00 a. m., CST.</h3>
+ 	 <div class="faded-pink-div text-start spacing-below-25 spacing-above-15 text-25">
+	           <p><strong> We are currently performing scheduled maintenance. Please try again after X:00am CST.</strong><br>
+	           Estamos realizando un mantenimiento programado. Inténtelo nuevamente después de las X:00am CST.</p>
 	            </div>
   
     
@@ -141,8 +161,8 @@
     	 </div>
 						
             
-             <div class="logo-container img">
-                <img src="/images/mn-logo-horizontal-rgb.png" alt="mn LOGO" style="width: 50%;" class="mn-logo">
+             <div class="img">
+                <img src="/images/mn-logo-horizontal-rgb.png" alt="mn LOGO" class="mn-logo">
        
             </div>
             <br>	<br>
@@ -153,7 +173,7 @@
 		   </div>
 		   <br>	<br>  
 		   
-    <section class="light-gray-div text-start">
+    <section class="light-gray-div text-start spacing-below-25">
         <h2><strong>Need help now?</strong></h2>
         <p class="text-25">If you are in a mental health crisis, call or text 988.</p>
         <p class="text-25">To connect with food, housing, medical or other help, you can call 211, or text your zip code to 898-211, or visit <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" lang="en" style="text-decoration: underline;">211.org.</a></p>
@@ -165,11 +185,12 @@
 		  </div>
 		   <br> <br>
 		   
- 	<section class="light-gray-div text-start">
+ 	<section class="light-gray-div text-start spacing-below-25">
         <h2><strong>¿Necesita ayuda ahora?</strong></h2>
         <p class="text-25">Si se encuentra en una crisis de salud mental, llame o envíe un mensaje de texto al 988.</p>
         <p class="text-25">Para recibir ayuda de alimentos, vivienda, ayuda médica y de otro tipo, puede llamar al 211, o enviar un mensaje de texto con su código postal al 898-211, o visitar <a href="https://www.211.org/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">211.org.</a></p>
     </section>
+    <br> <br>
 		   
 		   </div>
 		   </div>

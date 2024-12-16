@@ -12,7 +12,7 @@
 	<meta property="og:image" content="/images/social-share-link-image.png" />
 	<meta name="robots" content="noindex, nofollow">
     
-    <title>MNbenefits</title>
+    <title>Maintenance / Mantenimiento</title>
     <link href="/honeycrisp.min.css" rel="preload" as="style" />
     <link href="/honeycrisp.min.css" rel="stylesheet"/>
     <link rel="preload" href="/honeycrisp.min.js" as="script">
@@ -31,11 +31,11 @@
 
 <style>
         .faded-pink-div {
-            background-color: rgba(252, 227, 217); 
-            border: 5px solid #d13f00; 
+ 			background-color: rgba(252, 227, 217); 
+            border: 3px solid #d13f00; 
             padding: 20px;
-            border-radius: 8px; 
-            text-align: center; 
+            border-radius: 2px; 
+            text-align: center;
         }
         
          .light-gray-div {
@@ -63,7 +63,27 @@
 		 	        
 		    }
 			}
-			
+	   
+	  .img {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .img img {
+		width: 328px;
+		height: 35px;
+    }
+
+    @media (max-width: 768px) {
+        .img {
+            justify-content: flex-start; /* Left-align on small devices */
+        }
+
+        .img img {
+            width: 242px;
+		height: 26px; 
+        }
+    }		
         
         
     </style>
@@ -81,16 +101,16 @@
 <path d="M18.3791 42C18.3791 42 1 34.9491 1 13.2155C1 13.2155 14.2635 11.4462 18.3791 8C22.6739 11.5981 35 13.2155 35 13.2155C35 35.266 18.3791 42 18.3791 42Z" fill="white" stroke="#003865" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19.9734 25.9632H23.3945C23.7275 25.9632 24 25.6909 24 25.358V21.6299C24 21.297 23.7275 21.0247 23.3945 21.0247H19.9734V17.6052C19.9673 17.4358 19.9069 17.2845 19.7918 17.1755C19.6828 17.0666 19.5313 17 19.3679 17H15.632C15.299 17 15.0265 17.2723 15.0265 17.6052V21.0247H11.6055C11.2725 21.0247 11 21.297 11 21.6299V25.3641C11 25.6969 11.2725 25.9693 11.6055 25.9693H15.0265V29.3887C15.0265 29.5582 15.0931 29.7034 15.2082 29.8184C15.3172 29.9274 15.4685 29.9939 15.6381 30H19.3739C19.7069 30 19.9794 29.7277 19.9794 29.3948L19.9734 25.9632Z" fill="#9BCBEB" stroke="#003865" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-                <span class="sr-only-on-mobile ">Renew my MN health care coverage</span>
+                <span class="sr-only-on-mobile ">Renew my MN health care coverage / Renovar mi cobertura de atención médica de MN</span>
             </div>
         </div>
     </header>
 </div>
 
 
- 	  	 <div class="faded-pink-div text-start spacing-below-25 spacing-above-15">
-	           <h1> We are currently performing scheduled maintenance. Please try again after X:00am CST.</h1>
-	           <h3>Estamos realizando un mantenimiento programado. Inténtelo nuevamente después de las X:00 a. m., CST.</h3>
+ 	  	 <div class="faded-pink-div text-start spacing-below-25 spacing-above-15 text-25">
+	           <p><strong> We are currently performing scheduled maintenance. Please try again after X:00am CST.</strong> <br>
+	           Estamos realizando un mantenimiento programado. Inténtelo nuevamente después de las X:00 am CST.</p>
 	            </div>
   
     
@@ -131,8 +151,8 @@
     	 </div>
 						
             
-             <div class="logo-container img">
-                <img src="/images/mn-logo-horizontal-rgb.png"  alt="mn LOGO"  style="width: 50%;" class="mn-logo">
+             <div class="img">
+                <img src="/images/mn-logo-horizontal-rgb.png"  alt="mn LOGO"  class="mn-logo">
        
             </div>
             <br>	<br>
@@ -141,22 +161,19 @@
             <h1 class="spacing-below-25"><strong>Our document upload service is off-line for scheduled maintenance.</strong></h1>
             <p class="text-25 spacing-below-15 ">Please return later to upload documents for your healthcare case. <br>
             <a href="https://mn.gov/dhs/renewmycoverage/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"> Return to Renew my coverage</a>
+            </div>
+            
             <br><hr><br>
-		   
+            
+		   <div class="spacing-above-15">
 		   <h1 class="spacing-below-25"><strong>Nuestro servicio de carga de documentos está fuera de servicio por mantenimiento programado.</strong></h1>
             <p class="text-25 spacing-below-15">Regrese más tarde para cargar documentos para su caso de atención médica.<br> 
             <a href="https://mn.gov/dhs/renewmycoverage-es/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Regresar a Renovar mi cobertura.</a>
 		   
+		   
 		   </div>
-		   </div>
-		</div>
-      <div class="grid">
-        <div class="grid__item width-desktop-one-fourth">
-
-
-         </div>
-
-       </div>
+		
+  
     </section>
 
   </main>
