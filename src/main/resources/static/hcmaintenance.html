@@ -85,7 +85,48 @@
         }
     }		
         
-        
+    .container {
+   display: flex;              /* Use flexbox to control layout */
+  justify-content: flex-start; /* Align children to the left */
+  align-items: flex-start;     /* Align children to the top (optional) */
+  margin: 0;                   /* Remove margin around the container */
+  padding: 0;
+  color: white;
+  min-height: 7rem;
+}
+
+.column-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 0;
+    text-align: left;
+
+}
+
+
+.rows-container {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  justify-content: flex-start; /* Align rows to the top */
+  align-items: stretch; /* Ensure the rows stretch across the container */
+  margin: 7px;
+  
+}
+.rows-container span {
+      /* Remove padding inside the paragraph */
+      margin: 0;
+      padding: 0;
+  line-height: 2;  
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.rows-container span:last-child {
+        margin-bottom: 0;
+    }
+  
     </style>
 
 </head>
@@ -94,6 +135,8 @@
   <div>
     <header id="headerMNbenefits" class="main-header toolbar__wrapper">
         <div class="toolbar">
+			<div class="container">
+				<div class="column-one">
             <div class="logo">
 				<svg width="56" height="43" viewBox="0 0 56 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M26.7851 36.7703C26.7719 36.7703 26.7589 36.7677 26.7467 36.7626C26.7346 36.7574 26.7236 36.7499 26.7144 36.7404C26.6953 36.7208 26.6846 36.6945 26.6845 36.6672L26.747 25.1089L25.7974 23.7764C25.656 23.578 25.5987 23.332 25.6379 23.0917C25.6772 22.8514 25.8097 22.6362 26.0069 22.4928L26.8423 21.8849L26.7824 18.6283L26.0994 10.3456L25.1525 7.63177C25.1498 7.62108 25.1498 7.6099 25.1525 7.59921L25.1035 2.27194C25.1049 2.16703 25.1471 2.06677 25.2213 1.99233C25.2954 1.91789 25.3956 1.87511 25.5008 1.873L33.2586 2.0684L33.4844 0.201276C33.4877 0.1768 33.4996 0.1543 33.5181 0.137866C33.5366 0.121432 33.5604 0.112155 33.5851 0.111719H35.4082C35.4332 0.111573 35.4572 0.12065 35.4758 0.137192C35.4944 0.153735 35.5062 0.176568 35.5089 0.201276L35.9334 3.62614C36.6273 3.81069 37.3348 3.9708 38.0368 4.10378C39.5245 4.37772 41.0308 4.5392 42.5429 4.58684C42.9753 4.6023 43.3881 4.77064 43.7075 5.06177C44.3638 5.65458 45.0958 6.15829 45.8844 6.55981L45.9823 6.60866C46.8901 7.10261 47.8854 7.41598 48.9129 7.53136L55.2667 8.27767C55.3452 8.28775 55.4186 8.32199 55.4768 8.37563C55.5349 8.42927 55.5748 8.49964 55.591 8.57695C55.6071 8.65427 55.5987 8.73468 55.5669 8.80702C55.5352 8.87935 55.4816 8.94001 55.4136 8.98055L53.3782 10.1584L45.6422 16.9294L45.5415 20.509C45.5416 20.5221 45.5389 20.5352 45.5338 20.5473C45.5286 20.5594 45.5211 20.5704 45.5116 20.5795C44.9791 21.1102 44.3896 21.5807 43.7538 21.9826C43.4666 22.1343 43.233 22.3701 43.0844 22.6583C42.9888 22.8545 42.9529 23.0743 42.981 23.2906C43.0317 23.5225 43.1413 23.7374 43.2994 23.9148L43.3892 24.0424C43.5851 24.3138 43.781 24.6259 43.9687 24.9325C43.9799 24.9504 43.9856 24.9712 43.9851 24.9922L43.713 29.6247L50.2626 34.3767C50.2748 34.386 50.2849 34.3978 50.2919 34.4114C50.299 34.4251 50.3029 34.4401 50.3034 34.4554L50.3742 36.7106C50.3737 36.7387 50.3631 36.7657 50.3442 36.7866C50.3245 36.8056 50.2982 36.8163 50.2708 36.8164L26.7851 36.7703Z" fill="#9BCBEB"/>
@@ -101,8 +144,17 @@
 <path d="M18.3791 42C18.3791 42 1 34.9491 1 13.2155C1 13.2155 14.2635 11.4462 18.3791 8C22.6739 11.5981 35 13.2155 35 13.2155C35 35.266 18.3791 42 18.3791 42Z" fill="white" stroke="#003865" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19.9734 25.9632H23.3945C23.7275 25.9632 24 25.6909 24 25.358V21.6299C24 21.297 23.7275 21.0247 23.3945 21.0247H19.9734V17.6052C19.9673 17.4358 19.9069 17.2845 19.7918 17.1755C19.6828 17.0666 19.5313 17 19.3679 17H15.632C15.299 17 15.0265 17.2723 15.0265 17.6052V21.0247H11.6055C11.2725 21.0247 11 21.297 11 21.6299V25.3641C11 25.6969 11.2725 25.9693 11.6055 25.9693H15.0265V29.3887C15.0265 29.5582 15.0931 29.7034 15.2082 29.8184C15.3172 29.9274 15.4685 29.9939 15.6381 30H19.3739C19.7069 30 19.9794 29.7277 19.9794 29.3948L19.9734 25.9632Z" fill="#9BCBEB" stroke="#003865" stroke-width="0.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-                <span class="sr-only-on-mobile ">Renew my MN health care coverage / Renovar mi cobertura de atención médica de MN</span>
-            </div>
+</div>
+</div>
+
+             
+				 <div class="rows-container">
+                <span class="sr-only-on-mobile">Renew my MN health care coverage</span>
+                <span class="sr-only-on-mobile">Renovar mi cobertura de atención médica de MN</span>
+           
+           </div>
+           
+           </div>
         </div>
     </header>
 </div>
